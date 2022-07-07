@@ -1,0 +1,133 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Project1</title>
+    <style>
+      .description {
+        font-size: 20px;
+        text-decoration: none;
+        color: brown;
+      }
+      .description:hover {
+        text-decoration: underline;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 15px 60px;
+        background-image: linear-gradient(
+          to top,
+          rgb(242, 186, 57),
+          rgb(244, 239, 225)
+        );
+      }
+      .contacts {
+        color: rgb(245, 243, 238);
+        margin: 0 auto;
+        padding: 0 0 0 200;
+      }
+
+      h1 {
+        font-size: 48px;
+        font-weight: 900;
+        color: rgb(192, 33, 33);
+        text-align: center;
+        margin: 0;
+      }
+      h2 {
+        line-height: 0.2em;
+        text-align: center;
+        font-size: 34px;
+      }
+
+      body {
+        font-family: "Font Awesome 5 Free", monospace;
+        font-style: normal;
+        width: 50%;
+        margin: 60px auto;
+      }
+
+      img {
+        display: block;
+        margin: 0 auto;
+        border: 20px;
+        border-style: solid;
+        border-color: rgb(209, 139, 33);
+      }
+      button {
+        padding: 15px 20px;
+        margin: 30px auto;
+        display: block;
+        background: rgb(192, 33, 33);
+        color: white;
+        border-radius: 20px;
+        box-shadow: rgba(53, 23, 21, 0.08) 0px 15px 15px 0;
+        transition: all 200ms ease-in-out;
+      }
+      button:hover {
+        background: white;
+        color: rgb(192, 33, 33);
+        cursor: pointer;
+      }
+
+      p {
+        text-align: center;
+        margin: 20px 0 10px;
+        font-size: 24px;
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>I love <strong>Devon Rex</strong></h1>
+      <h2>My cat is Devon Rex</h2>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/034/765/original/111.jpg?1653069697"
+        alt="MyCat"
+        width="150"
+      />
+      <hr />
+      <p>
+        The Devon rex has an elven, almost alien-like appearance. She's a
+        medium-size cat, weighing 6–9 pounds and standing about 10–12 inches
+        tall. Her large ears, big eyes, high cheekbones, long neck, and slender
+        body are some of the breed's most obvious traits—aside from the wavy
+        coat, of course.
+      </p>
+      <hr />
+      <a
+        href="https://www.dailypaws.com/cats-kittens/cat-breeds/devon-rex"
+        target="_blank"
+        class="description"
+      >
+        <em>Learn more</em>
+      </a>
+      <button>Enjoy Devon Rex</button>
+      <span class="contacts"><em>Coded by Semashko Tina</em></span>
+    </div>
+    <script>
+      let button = document.querySelector("button");
+      button.addEventListener("click", getBreed);
+
+      function getBreed() {
+        let yourName = prompt("What is your name?");
+        let catBreed = prompt("What cat breed you love?");
+
+        if (catBreed != "Devon Rex" && catBreed != "Devon-Rex") {
+          alert(
+            "☹️ " +
+              yourName +
+              ", you love " +
+              catBreed +
+              " because you never have Devon Rex "
+          );
+        } else {
+          alert("😄 " + yourName + ", enjoy " + catBreed + " with me! ");
+        }
+      }
+    </script>
+  </body>
+</html>
